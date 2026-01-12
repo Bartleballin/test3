@@ -1,0 +1,58 @@
+/* Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; background-color: #f0f4f8; }
+
+/* Top Nav */
+.top-nav { background: #a7c7e7; padding: 15px; text-align: center; }
+.top-nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+.top-nav a:hover { text-decoration: underline; }
+
+/* Header */
+header { background: linear-gradient(to right, #a7c7e7, #5e9ed6); color: white; padding: 80px 20px; text-align: center; }
+header h1 { font-size: 3.2em; }
+header p { font-size: 1.4em; margin: 10px 0; }
+
+/* CTA Button */
+.cta-button { background-color: #3b82f6; color: white; padding: 16px 32px; text-decoration: none; border-radius: 6px; font-weight: bold; transition: all 0.3s; display: inline-block; margin-top: 20px; }
+.cta-button:hover { background-color: #2563eb; transform: translateY(-3px); }
+
+/* Sections */
+section { padding: 60px 20px; text-align: center; }
+#industries, #services { background-color: #dbeafe; }
+#industries ul, #services ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; max-width: 1200px; margin: 30px auto; }
+#industries li, #services li { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); width: 300px; transition: transform 0.3s; }
+#industries li:hover, #services li:hover { transform: translateY(-10px); }
+
+/* Testimonials & Cases */
+#testimonials, #case-studies { background: #eff6ff; }
+.testimonial, .case { background: white; padding: 20px; margin: 20px auto; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+
+/* Inspiration Gallery */
+#inspiration { background: linear-gradient(to bottom, #bfdbfe, #93c5fd); }
+.gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1200px; margin: 0 auto; }
+.gallery img { width: 200px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.gallery img:hover { transform: scale(1.05); }
+
+/* Contact Form */
+#contact { background-color: #eff6ff; }
+form { max-width: 600px; margin: 30px auto; display: flex; flex-direction: column; gap: 15px; }
+input, textarea { padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1em; }
+button { background-color: #3b82f6; color: white; padding: 15px; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s; }
+button:hover { background-color: #2563eb; }
+
+/* Footer */
+footer { background-color: #a7c7e7; color: white; text-align: center; padding: 20px; }
+
+/* Animations */
+h1, p, .cta-button { opacity: 0; animation: fadeInUp 1s forwards; }
+h1 { animation-delay: 0.2s; }
+p { animation-delay: 0.4s; }
+.cta-button { animation-delay: 0.6s; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .top-nav a { display: block; margin: 10px 0; }
+    #industries ul, #services ul { flex-direction: column; }
+    .gallery img { width: 100%; max-width: 300px; }
+}
